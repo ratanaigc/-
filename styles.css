@@ -1,0 +1,159 @@
+/* General styles for all devices */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #071941;
+}
+
+header {
+    background-color: #0e0601f3;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-menu ul li {
+    margin-right: 20px;
+}
+
+.main-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    display: flex;
+    margin-top: 10px;
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+}
+
+.results-dropdown {
+    position: absolute;
+    background-color: white;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.result-item:hover {
+    background-color: #f1f1f1;
+}
+
+main {
+    padding: 20px;
+}
+
+#searchResults {
+    width: 97.9%;
+    margin-top: none;
+    padding: 0px 0px 11% ;
+    background-color: white;
+    border-radius: 25px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-menu ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .main-menu ul li {
+        margin: 10px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .results-dropdown {
+        width: 100%;
+    }
+
+    #searchResults {
+        color: aqua ;
+        width: 89%;
+        margin-top: 0px;
+        padding: 0px 0px 11% ;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .main-menu ul li {
+        margin: 5px 0;
+    }
+
+    .search-bar input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .result-item {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    #searchResults {
+        color: aqua ;
+        width: 89%;
+        margin-top: 0px;
+        padding: 0px 0px 11% ;
+        background-color: white;
+        border-radius: 20px;
+    }
+}
